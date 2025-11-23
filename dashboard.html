@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - CRUD Usuarios</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <div>
+                <h1>👥 Dashboard de Usuarios</h1>
+                <p id="userWelcome">Bienvenido al sistema</p>
+            </div>
+            <button id="logoutBtn" class="btn btn-secondary">🚪 Cerrar Sesión</button>
+        </header>
+
+        <div class="stats-card">
+            <h3>📊 Estadísticas</h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" id="totalUsers">0</span>
+                    <span class="stat-label">Usuarios Totales</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="todayUsers">0</span>
+                    <span class="stat-label">Registrados Hoy</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="section-header">
+                <h2>📋 Lista de Usuarios Registrados</h2>
+                <button id="refreshBtn" class="btn btn-outline">🔄 Actualizar</button>
+            </div>
+            
+            <div id="usersList" class="users-grid">
+                <!-- Los usuarios se cargan dinámicamente aquí -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
