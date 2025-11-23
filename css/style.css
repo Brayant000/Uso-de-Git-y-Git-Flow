@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-    max-width: 500px;
+    max-width: 1200px; /* Cambiado de 500px para el dashboard */
     margin: 0 auto;
 }
 
@@ -336,7 +336,7 @@ h1 {
     color: #333;
 }
 
-.close-modal {
+.close-modal, .close-delete-modal { /* Aseguramos que ambos cierres tengan estilo */
     font-size: 24px;
     font-weight: bold;
     cursor: pointer;
@@ -344,7 +344,7 @@ h1 {
     transition: color 0.3s;
 }
 
-.close-modal:hover {
+.close-modal:hover, .close-delete-modal:hover {
     color: #333;
 }
 
@@ -364,4 +364,60 @@ h1 {
 .form-actions .btn {
     width: auto;
     flex: 1;
+}
+
+/* --- NUEVOS ESTILOS PARA MODAL DE ELIMINACIÓN --- */
+
+.modal-body {
+    padding: 25px;
+}
+
+.warning-message {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #fff3cd; /* Amarillo claro de advertencia */
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+}
+
+.warning-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.warning-message p {
+    margin: 0;
+    color: #856404;
+    font-weight: 500;
+}
+
+.user-preview {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.user-preview h4 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.user-preview p {
+    margin: 5px 0;
+    color: #666;
+}
+
+/* Estilo específico para el botón de peligro (Eliminar) */
+.btn-danger {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+    transform: translateY(-1px);
 }
